@@ -1,16 +1,24 @@
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider, createRouter } from '@tanstack/react-router'
+import { Link, RouterProvider, createRouter } from '@tanstack/react-router'
 
-import { startReactDsfr } from "@codegouvfr/react-dsfr/spa";
-startReactDsfr({ defaultColorScheme: "system" });
-
+import { startReactDsfr } from '@codegouvfr/react-dsfr/spa'
 
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
 
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
+import type { JSX } from 'react'
+import type { LinkProps } from '@tanstack/react-router'
+
+startReactDsfr({ defaultColorScheme: 'system', Link })
+
+declare module '@codegouvfr/react-dsfr/spa' {
+  interface RegisterLink {
+    Link: (props: LinkProps) => JSX.Element
+  }
+}
 
 // Create a new router instance
 const router = createRouter({
