@@ -2,6 +2,10 @@ import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 
+import { startReactDsfr } from "@codegouvfr/react-dsfr/spa";
+startReactDsfr({ defaultColorScheme: "system" });
+
+
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
 
