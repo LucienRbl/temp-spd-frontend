@@ -96,15 +96,15 @@ exports[`Header > WHEN user see the header IT should render correctly 1`] = `
                           >
                             <use
                               class="fr-artwork-decorative"
-                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/light.svg#artwork-decorative"
+                              xlink:href="/node_modules/.pnpm/@codegouvfr+react-dsfr@1.31.1/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/light.svg#artwork-decorative"
                             />
                             <use
                               class="fr-artwork-minor"
-                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/light.svg#artwork-minor"
+                              xlink:href="/node_modules/.pnpm/@codegouvfr+react-dsfr@1.31.1/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/light.svg#artwork-minor"
                             />
                             <use
                               class="fr-artwork-major"
-                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/light.svg#artwork-major"
+                              xlink:href="/node_modules/.pnpm/@codegouvfr+react-dsfr@1.31.1/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/light.svg#artwork-major"
                             />
                           </svg>
                         </div>
@@ -136,15 +136,15 @@ exports[`Header > WHEN user see the header IT should render correctly 1`] = `
                           >
                             <use
                               class="fr-artwork-decorative"
-                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/dark.svg#artwork-decorative"
+                              xlink:href="/node_modules/.pnpm/@codegouvfr+react-dsfr@1.31.1/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/dark.svg#artwork-decorative"
                             />
                             <use
                               class="fr-artwork-minor"
-                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/dark.svg#artwork-minor"
+                              xlink:href="/node_modules/.pnpm/@codegouvfr+react-dsfr@1.31.1/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/dark.svg#artwork-minor"
                             />
                             <use
                               class="fr-artwork-major"
-                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/dark.svg#artwork-major"
+                              xlink:href="/node_modules/.pnpm/@codegouvfr+react-dsfr@1.31.1/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/dark.svg#artwork-major"
                             />
                           </svg>
                         </div>
@@ -181,15 +181,15 @@ exports[`Header > WHEN user see the header IT should render correctly 1`] = `
                           >
                             <use
                               class="fr-artwork-decorative"
-                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/system.svg#artwork-decorative"
+                              xlink:href="/node_modules/.pnpm/@codegouvfr+react-dsfr@1.31.1/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/system.svg#artwork-decorative"
                             />
                             <use
                               class="fr-artwork-minor"
-                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/system.svg#artwork-minor"
+                              xlink:href="/node_modules/.pnpm/@codegouvfr+react-dsfr@1.31.1/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/system.svg#artwork-minor"
                             />
                             <use
                               class="fr-artwork-major"
-                              xlink:href="/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/system.svg#artwork-major"
+                              xlink:href="/node_modules/.pnpm/@codegouvfr+react-dsfr@1.31.1/node_modules/@codegouvfr/react-dsfr/dsfr/artwork/system.svg#artwork-major"
                             />
                           </svg>
                         </div>
@@ -234,7 +234,7 @@ exports[`Header > WHEN user see the header IT should render correctly 1`] = `
                   <p
                     class="fr-logo"
                   >
-                    Service public
+                    République Française
                   </p>
                 </a>
               </div>
