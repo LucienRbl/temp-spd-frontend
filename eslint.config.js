@@ -81,6 +81,17 @@ export default [
       ],
 
       'import/no-unresolved': 'off',
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['../*', '../../*', '../../../*', '../../../../*'],
+              message: 'Use @/ imports instead of relative parent paths.',
+            },
+          ],
+        },
+      ],
 
       /* Vite */
       'react-refresh/only-export-components': [
