@@ -1,4 +1,4 @@
-import { Footer as DsfrFooter } from '@codegouvfr/react-dsfr/Footer'
+import { Footer as DsfrFooter } from '@codegouvfr/react-dsfr/Footer';
 
 export default function Footer() {
   return (
@@ -19,5 +19,5 @@ export default function Footer() {
         href: '#',
       }}
     />
-  )
+  );
 }

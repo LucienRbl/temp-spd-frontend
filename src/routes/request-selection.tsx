@@ -1,21 +1,20 @@
-import { useState } from 'react'
-import { createFileRoute } from '@tanstack/react-router'
-import { RadioButtons } from '@codegouvfr/react-dsfr/RadioButtons'
-import { fr } from '@codegouvfr/react-dsfr'
+import { fr } from '@codegouvfr/react-dsfr';
+import { RadioButtons } from '@codegouvfr/react-dsfr/RadioButtons';
+import { createFileRoute } from '@tanstack/react-router';
+import { useState } from 'react';
 
 export const Route = createFileRoute('/request-selection')({
   component: RequestSelection,
-})
+});
 
 function RequestSelection() {
   const [value, setValue] = useState<'one' | 'two' | 'three' | undefined>(
     undefined,
-  )
+  );
 
-  const onRequestSelected = (value: 'one' | 'two' | 'three' | undefined) => {
-    setValue(value)
-    console.log('Selected request type:', value)
-  }
+  const onRequestSelected = (newValue: 'one' | 'two' | 'three' | undefined) => {
+    setValue(newValue);
+  };
 
   return (
     <div className={fr.cx('fr-mt-8v', 'fr-mb-8v')}>
@@ -57,5 +56,5 @@ function RequestSelection() {
         ]}
       />
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { Header as DsfrHeader } from '@codegouvfr/react-dsfr/Header'
+import { Header as DsfrHeader } from '@codegouvfr/react-dsfr/Header';
 
 export default function Header() {
   return (
@@ -48,5 +48,5 @@ export default function Header() {
         },
       ]}
     />
-  )
+  );
 }

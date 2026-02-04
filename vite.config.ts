@@ -1,11 +1,10 @@
-import { URL, fileURLToPath } from 'node:url'
-import { defineConfig } from 'vitest/config'
-import { devtools } from '@tanstack/devtools-vite'
-import viteReact from '@vitejs/plugin-react'
+import { URL, fileURLToPath } from 'node:url';
 
-import tailwindcss from '@tailwindcss/vite'
-
-import { tanstackRouter } from '@tanstack/router-plugin/vite'
+import tailwindcss from '@tailwindcss/vite';
+import { devtools } from '@tanstack/devtools-vite';
+import { tanstackRouter } from '@tanstack/router-plugin/vite';
+import viteReact from '@vitejs/plugin-react';
+import { defineConfig } from 'vitest/config';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,4 +29,4 @@ export default defineConfig({
     resolveSnapshotPath: (testPath: string, snapExtension: string) =>
       testPath + snapExtension,
   },
-})
+});
