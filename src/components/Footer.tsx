@@ -3,6 +3,49 @@ import { Footer as DsfrFooter } from '@codegouvfr/react-dsfr/Footer';
 
 const URL_MON_COMPTE_ANTS = import.meta.env.VITE_URL_MON_COMPTE_ANTS;
 
+export default function Footer() {
+  return (
+    <footer id="fr-footer" className="fr-footer" role="contentinfo">
+      <FooterLinkList />
+      <DsfrFooter
+        id="fr-footer-inner"
+        accessibility="fully compliant"
+        brandTop={
+          <>
+            RÉPUBLIQUE
+            <br />
+            FRANÇAISE
+          </>
+        }
+        homeLinkProps={{
+          title: 'Accueil ANTS',
+          href: `${URL_MON_COMPTE_ANTS}/mon_espace`,
+          'aria-label': 'France titre - Agence nationale des titres sécurisés',
+        }}
+        bottomItems={[headerFooterDisplayItem]}
+        contentDescription={
+          <>
+            Ce site est édité par{' '}
+            <a href="https://ants.gouv.fr/" target="_blank" rel="noreferrer">
+              France Titres
+            </a>
+          </>
+        }
+        operatorLogo={{
+          alt: 'Accueil - France titre - Agence nationale des titres sécurisés',
+          imgUrl: '/src/assets/media/Logo_France_Titres.svg',
+          orientation: 'horizontal',
+        }}
+        accessibilityLinkProps={{
+          href: 'https://ants.gouv.fr/accessibilite-des-demarches-en-ligne-et-des-applications-mobiles',
+          'aria-label':
+            "En savoir plus sur l'accessibilité des démarches en ligne et des applications mobiles",
+        }}
+      />
+    </footer>
+  );
+}
+
 const linkListData = [
   {
     categoryName: "Besoin d'aide pour cette démarche en ligne ?",
@@ -77,48 +120,5 @@ function FooterLinkList() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default function Footer() {
-  return (
-    <footer id="fr-footer" className="fr-footer" role="contentinfo">
-      <FooterLinkList />
-      <DsfrFooter
-        id="fr-footer-inner"
-        accessibility="fully compliant"
-        brandTop={
-          <>
-            RÉPUBLIQUE
-            <br />
-            FRANÇAISE
-          </>
-        }
-        homeLinkProps={{
-          title: 'Accueil ANTS',
-          href: `${URL_MON_COMPTE_ANTS}/mon_espace`,
-          'aria-label': 'France titre - Agence nationale des titres sécurisés',
-        }}
-        bottomItems={[headerFooterDisplayItem]}
-        contentDescription={
-          <>
-            Ce site est édité par{' '}
-            <a href="https://ants.gouv.fr/" target="_blank" rel="noreferrer">
-              France Titres
-            </a>
-          </>
-        }
-        operatorLogo={{
-          alt: 'Accueil - France titre - Agence nationale des titres sécurisés',
-          imgUrl: '/src/assets/media/Logo_France_Titres.svg',
-          orientation: 'horizontal',
-        }}
-        accessibilityLinkProps={{
-          href: 'https://ants.gouv.fr/accessibilite-des-demarches-en-ligne-et-des-applications-mobiles',
-          'aria-label':
-            "En savoir plus sur l'accessibilité des démarches en ligne et des applications mobiles",
-        }}
-      />
-    </footer>
   );
 }
