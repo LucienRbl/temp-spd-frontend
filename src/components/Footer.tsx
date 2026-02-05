@@ -1,6 +1,8 @@
 import { headerFooterDisplayItem } from '@codegouvfr/react-dsfr/Display';
 import { Footer as DsfrFooter } from '@codegouvfr/react-dsfr/Footer';
 
+const URL_MON_COMPTE_ANTS = import.meta.env.VITE_URL_MON_COMPTE_ANTS;
+
 const linkListData = [
   {
     categoryName: "Besoin d'aide pour cette démarche en ligne ?",
@@ -94,7 +96,7 @@ export default function Footer() {
         }
         homeLinkProps={{
           title: 'Accueil ANTS',
-          href: 'https://moncompte.ants.gouv.fr/mon_espace',
+          href: `${URL_MON_COMPTE_ANTS}/mon_espace`,
           'aria-label': 'France titre - Agence nationale des titres sécurisés',
         }}
         bottomItems={[headerFooterDisplayItem]}
