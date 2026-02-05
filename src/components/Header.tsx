@@ -4,7 +4,7 @@ import { Header as DsfrHeader } from '@codegouvfr/react-dsfr/Header';
 import { useIsDark } from '@codegouvfr/react-dsfr/useIsDark';
 import { useState } from 'react';
 
-const URL_ANTS = import.meta.env.VITE_URL_ANTS;
+const URL_MON_COMPTE_ANTS = import.meta.env.VITE_URL_MON_COMPTE_ANTS;
 
 export default function Header() {
   const [userInfo] = useState({
@@ -65,7 +65,7 @@ export default function Header() {
         </span>,
         <DsfrButton
           linkProps={{
-            href: `${URL_ANTS}/mon_espace`,
+            href: `${URL_MON_COMPTE_ANTS}/mon_espace`,
             target: '_self',
           }}
           priority="tertiary"
