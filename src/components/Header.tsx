@@ -4,9 +4,11 @@ import { Header as DsfrHeader } from '@codegouvfr/react-dsfr/Header';
 import { useIsDark } from '@codegouvfr/react-dsfr/useIsDark';
 import { useState } from 'react';
 
+const URL_ANTS = import.meta.env.VITE_URL_ANTS;
+
 export default function Header() {
   const [userInfo] = useState({
-    name: 'John Doe',
+    name: 'Lorraine HIPSEAUME',
     isVerified: true,
     code: '12 345 678',
   });
@@ -51,19 +53,19 @@ export default function Header() {
             'fr-mr-2v',
             'fr-ml-0',
             'fr-text--sm',
+            'fr-text--bold',
+            'fr-pl-2w',
           )}
           style={{
-            fontWeight: 500,
             color: fr.colors.decisions.text.default.grey.default,
-            borderLeft: `1px solid #E5E5E5`,
-            paddingLeft: '1rem',
+            borderLeft: `1px solid ${fr.colors.decisions.border.default.grey.default}`,
           }}
         >
           Compte n° {userInfo.code}
         </span>,
         <DsfrButton
           linkProps={{
-            href: 'https://moncompte.ants.gouv.fr/mon_espace',
+            href: `${URL_ANTS}/mon_espace`,
             target: '_self',
           }}
           priority="tertiary"
