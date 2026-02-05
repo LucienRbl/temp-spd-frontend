@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom/client';
 import './styles.css';
 
 import { routeTree } from './routeTree.gen';
+import './styles.css';
 
 startReactDsfr({ defaultColorScheme: 'system', Link });
 
