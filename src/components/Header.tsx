@@ -2,17 +2,16 @@ import { fr, type FrIconClassName } from '@codegouvfr/react-dsfr';
 import { Button as DsfrButton } from '@codegouvfr/react-dsfr/Button';
 import { Header as DsfrHeader } from '@codegouvfr/react-dsfr/Header';
 import { useIsDark } from '@codegouvfr/react-dsfr/useIsDark';
-import { useState } from 'react';
+
+import type { UserInfo } from '@/main';
 
 const URL_MON_COMPTE_ANTS = import.meta.env.VITE_URL_MON_COMPTE_ANTS;
 
-export default function Header() {
-  const [userInfo] = useState({
-    name: 'Lorraine HIPSEAUME',
-    isVerified: true,
-    code: '12 345 678',
-  });
+type HeaderProps = {
+  userInfo: UserInfo;
+};
 
+export default function Header({ userInfo }: HeaderProps) {
   const { isDark } = useIsDark();
 
   return (

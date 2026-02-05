@@ -16,6 +16,18 @@ declare module '@codegouvfr/react-dsfr/spa' {
   }
 }
 
+export type UserInfo = {
+  name: string;
+  isVerified: boolean;
+  code: string;
+};
+
+export const userInfoFixture: UserInfo = {
+  name: 'Lorraine HIPSEAUME',
+  isVerified: true,
+  code: '12 345 678',
+};
+
 const router = createRouter({
   routeTree,
   context: {},
