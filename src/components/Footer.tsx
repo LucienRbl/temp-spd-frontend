@@ -1,9 +1,12 @@
 import { headerFooterDisplayItem } from '@codegouvfr/react-dsfr/Display';
 import { Footer as DsfrFooter } from '@codegouvfr/react-dsfr/Footer';
+import { useIsDark } from '@codegouvfr/react-dsfr/useIsDark';
 
 const URL_MON_COMPTE_ANTS = import.meta.env.VITE_URL_MON_COMPTE_ANTS;
 
 export default function Footer() {
+  const { isDark } = useIsDark();
+
   return (
     <footer id="fr-footer" className="fr-footer" role="contentinfo">
       <FooterLinkList />
@@ -33,7 +36,9 @@ export default function Footer() {
         }
         operatorLogo={{
           alt: 'Accueil - France titre - Agence nationale des titres sécurisés',
-          imgUrl: '/src/assets/media/Logo_France_Titres.svg',
+          imgUrl: isDark
+            ? '/src/assets/media/Logo_France_Titres_dark.svg'
+            : '/src/assets/media/Logo_France_Titres.svg',
           orientation: 'horizontal',
         }}
         accessibilityLinkProps={{
