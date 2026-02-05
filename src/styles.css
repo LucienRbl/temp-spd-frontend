@@ -26,3 +26,7 @@
 .fr-footer__top {
   margin-bottom: 0 !important; /* Remove default margin-bottom */
 }
+
+.previous-button {
+  padding-left: 0 !important; /* Remove left padding */
+}
