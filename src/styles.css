@@ -9,4 +9,5 @@
 /* Enlarge France Titres operator logo in the DSFR header */
 .fr-header__operator img {
   max-width: none !important; /* Remove default 9.0625rem limitation */
+  height: 90px !important; /* Set a fixed height for better visibility */
 }

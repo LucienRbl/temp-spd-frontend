@@ -1,6 +1,7 @@
 import { fr, type FrIconClassName } from '@codegouvfr/react-dsfr';
 import { Button as DsfrButton } from '@codegouvfr/react-dsfr/Button';
 import { Header as DsfrHeader } from '@codegouvfr/react-dsfr/Header';
+import { useIsDark } from '@codegouvfr/react-dsfr/useIsDark';
 import { useState } from 'react';
 
 export default function Header() {
@@ -9,6 +10,8 @@ export default function Header() {
     isVerified: true,
     code: '12 345 678',
   });
+
+  const { isDark } = useIsDark();
 
   return (
     <DsfrHeader
@@ -27,7 +30,9 @@ export default function Header() {
       }}
       operatorLogo={{
         alt: 'Accueil - France titre - Agence nationale des titres sécurisés',
-        imgUrl: 'src/assets/media/Logo_France_Titres.svg',
+        imgUrl: isDark
+          ? 'src/assets/media/Logo_France_Titres_dark.svg'
+          : 'src/assets/media/Logo_France_Titres.svg',
         orientation: 'horizontal',
       }}
       quickAccessItems={[
