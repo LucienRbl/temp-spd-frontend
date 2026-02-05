@@ -4,6 +4,7 @@ import type { LinkProps } from '@tanstack/react-router';
 import { StrictMode } from 'react';
 import type { JSX } from 'react';
 import ReactDOM from 'react-dom/client';
+import './styles.css';
 
 import { routeTree } from './routeTree.gen';
 

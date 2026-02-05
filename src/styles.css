@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+.fr-icon-ants-verified::before,
+.fr-icon-ants-verified::after {
+  -webkit-mask-image: url("src/assets/media/icons/ants-verified.svg");
+  mask-image: url("src/assets/media/icons/ants-verified.svg");
+}
+
+/* Enlarge France Titres operator logo in the DSFR header */
+.fr-header__operator img {
+  max-width: none !important; /* Remove default 9.0625rem limitation */
+}
