@@ -13,7 +13,9 @@
     "test": "vitest run",
     "test:lint": "eslint",
     "format": "prettier",
-    "check": "prettier --write . && eslint --fix"
+    "check": "prettier --write . && eslint --fix",
+    "predev": "react-dsfr update-icons",
+    "prebuild": "react-dsfr update-icons"
   },
   "dependencies": {
     "@codegouvfr/react-dsfr": "^1.31.1",
