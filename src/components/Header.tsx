@@ -21,6 +21,7 @@ export default function Header() {
       }
       homeLinkProps={{
         href: 'https://moncompte.ants.gouv.fr/mon_espace',
+        target: '_self',
         title: '',
         'aria-label': 'France titre - Agence nationale des titres sécurisés',
       }}
@@ -56,7 +57,10 @@ export default function Header() {
           Compte n° {userInfo.code}
         </span>,
         <DsfrButton
-          linkProps={{ href: 'https://moncompte.ants.gouv.fr/mon_espace' }}
+          linkProps={{
+            href: 'https://moncompte.ants.gouv.fr/mon_espace',
+            target: '_self',
+          }}
           priority="tertiary"
         >
           Mon compte
