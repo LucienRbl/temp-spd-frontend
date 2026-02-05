@@ -11,3 +11,17 @@
   max-width: none !important; /* Remove default 9.0625rem limitation */
   height: 90px !important; /* Set a fixed height for better visibility */
 }
+
+/* Enlarge France Titres operator logo in the DSFR header */
+.fr-footer__brand img {
+  max-width: none !important; /* Remove default 9.0625rem limitation */
+}
+
+/* Remove border from nested DsfrFooter when using custom linkList */
+#fr-footer-inner.fr-footer {
+  box-shadow: none;
+}
+
+.fr-footer__top {
+  margin-bottom: 0 !important; /* Remove default margin-bottom */
+}
