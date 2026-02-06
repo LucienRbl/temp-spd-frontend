@@ -24,7 +24,7 @@ export default function Header({ userInfo }: HeaderProps) {
         </>
       }
       homeLinkProps={{
-        href: 'https://moncompte.ants.gouv.fr/mon_espace',
+        href: `${URL_MON_COMPTE_ANTS}/mon_espace`,
         target: '_self',
         title: '',
         'aria-label': 'France titre - Agence nationale des titres sécurisés',
@@ -41,7 +41,11 @@ export default function Header({ userInfo }: HeaderProps) {
           iconId: userInfo.isVerified
             ? ('fr-icon-ants-verified' as FrIconClassName)
             : 'fr-icon-user-fill',
-          linkProps: { className: fr.cx('fr-btn--icon-right'), to: '/' },
+          linkProps: {
+            className: fr.cx('fr-btn--icon-right'),
+            href: `${URL_MON_COMPTE_ANTS}/mes_données`,
+            target: '_self',
+          },
           text: userInfo.name,
         },
         <span
