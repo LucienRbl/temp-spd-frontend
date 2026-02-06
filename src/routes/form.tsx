@@ -12,19 +12,31 @@ export const Route = createFileRoute('/form')({
 
 function Form() {
   const [currentStep, setCurrentStep] = useState(1);
+  const [triggerValidation, setTriggerValidation] = useState(false);
 
   const handleNextStep = () => {
-    setCurrentStep((prevStep) => Math.min(prevStep + 1, 7));
+    setTriggerValidation(true);
   };
 
   const handlePreviousStep = () => {
     setCurrentStep((prevStep) => Math.max(prevStep - 1, 1));
   };
 
+  const onValidated = (isValid: boolean) => {
+    setTriggerValidation(false); // reset trigger
+    if (isValid) setCurrentStep((prev) => prev + 1);
+    else console.warn('Validation failed!');
+  };
+
   const stepComponent = () => {
     switch (currentStep) {
       case 1:
-        return <StepFixture />;
+        return (
+          <StepFixture
+            triggerValidation={triggerValidation}
+            onValidated={onValidated}
+          />
+        );
       default:
         return <p>Contenu de l’étape {currentStep} ...</p>;
     }
@@ -67,13 +79,13 @@ function Form() {
         >
           Précédent
         </DsfrButton>
-        <h1 className="fr-mt-6v">Étape {currentStep}</h1>
         {stepComponent()}
         {currentStep < 7 ? (
           <DsfrButton
             onClick={handleNextStep}
             iconId="fr-icon-arrow-right-line"
             iconPosition="right"
+            className={fr.cx('fr-mt-8v')}
           >
             Étape Suivante
           </DsfrButton>
