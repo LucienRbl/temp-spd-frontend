@@ -31,7 +31,25 @@ function Form() {
   };
 
   return (
-    <div className={fr.cx('fr-px-25v')}>
+    <div className={fr.cx('fr-px-25v', 'fr-mt-10v')}>
+      <div
+        className={fr.cx(
+          'fr-px-3v',
+          'fr-py-1v',
+          'fr-mb-4v',
+          'fr-text--sm',
+          'fr-text--regular',
+        )}
+        style={{
+          width: 'fit-content',
+          backgroundColor:
+            fr.colors.decisions.background.contrast.purpleGlycine.default,
+          color: fr.colors.decisions.text.actionHigh.purpleGlycine.default,
+        }}
+      >
+        {' '}
+        Titre de la démarche en cours présent sur chacune des pages
+      </div>
       <DsfrStepper
         currentStep={currentStep}
         nextTitle={`Étape ${currentStep + 1}`}
